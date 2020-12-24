@@ -14,7 +14,25 @@
   <div class="bottom">
    <div class="buttons">
       <%= link_to "Zurück", address_path, class:"button-empty" %>
-      <%= link_to "Ab zu FabuCar!", login_path, class:"button-blue small" %>
+      <%= link_to "Ab zu FabuCar!", login_path, class:"button-blue small", id:"button-final"%>
     </div>
   </div>
 </div>
+
+<script>
+  const buttonFinal = document.getElementById("button-final");
+  buttonFinal.addEventListener("click", showAll);
+
+  function showAll() {
+    const name = sessionStorage.getItem("name");
+    const email = sessionStorage.getItem("email");
+    const code = sessionStorage.getItem("code");
+    const password = sessionStorage.getItem("password");
+    const address = sessionStorage.getItem("address");
+    console.log(`name: ${name}`);
+    console.log(`email: ${email}`);
+    console.log(`code: ${code}`);
+    console.log(`password: ${password}`);
+    console.log(`address: ${address}`);
+  }
+</script>
