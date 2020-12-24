@@ -22,8 +22,8 @@
     font-size: 24px;
     border: solid 2px #dce2e5;
     outline: none;
-    width: 46px;
-    height: 46px;
+    width: 45px;
+    height: 45px;
     border-radius: 5px;
 
     &:focus {
@@ -41,4 +41,9 @@
 
 .wide {
   width: 66%;
+}
+
+#email-placeholder {
+  color: #0071bc;
+  font-weight: bold;
 }

@@ -6,7 +6,9 @@
       </div>
       <div class="text">
         <br>
-        <p>Wir haben dir eine E-Mail an s.beeken@yahoo.de geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein. </p>
+        <p>Wir haben dir eine E-Mail an <br> </p>
+        <p id="email-placeholder"></p>
+        <p> geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein. </p>
         <br>
       </div>
       <div id="form">
@@ -29,6 +31,7 @@
 
 
 <script>
+  document.getElementById("email-placeholder").innerText = sessionStorage.getItem("email")
   const buttonCode = document.getElementById("button-code");
   buttonCode.addEventListener("click", saveCode);
 
