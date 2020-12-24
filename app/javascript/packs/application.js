@@ -26,8 +26,4 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-document.addEventListener("turbolinks:load", () => {
-  document.querySelector("input").addEventListener("focus", function () {
-    window.scroll(0, 0);
-  });
-});
+document.addEventListener("turbolinks:load", () => {});
