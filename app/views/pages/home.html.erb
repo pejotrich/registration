@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="main">
+    <div class="center">
+      <%= image_tag "logo.png", class: "logo" %>
+      <h1>Herzlich Willkommen!</h1>
+      <p>Das Portal für KFZ-Profis</p>
+    </div>
+  </div>
+  <div class="bottom">
+    <%= link_to "Jetzt registrieren", registrierung_path, class:"button-blue" %>
+    <p>Du hast bereits einen Account? <%= link_to "Anmelden", login_path %></p>
+  </div>
+</div>

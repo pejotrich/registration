@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="main">
+    <div class="center">
+      <div class="headline">
+        <h1>Gib deine E-Mail Adresse ein</h1>
+      </div>
+      <br>
+      <input id="input-email"class="form-control field no-margin" type="text" placeholder="E-Mail Adresse">>
+      <p class="text-narrow">Mit dem Fortfahren der Registrierung bestätige ich die <a href="">Hinweise zum Datenschutz</a> sowie die geltenden <a href="">Nutzungsbedingungen</a>  gelesen und akzeptiert zu haben.</p>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="buttons">
+      <%= link_to "Zurück", registrierung_path, class:"button-empty" %>
+      <%= link_to "Weiter", registrierung2_path, class:"button-blue small", id:"button-email"%>
+    </div>
+  </div>
+</div>
+
+<script>
+  const test = sessionStorage.getItem("name");
+  console.log(test)
+  const buttonEmail = document.getElementById("button-email");
+  buttonEmail.addEventListener("click", saveEmail);
+
+  function saveEmail() {
+    const email = document.getElementById("input-email").value;
+    sessionStorage.setItem("email", email);
+  }
+</script>

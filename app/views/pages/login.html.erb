@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="main">
+    <div class="center">
+      <div class="headline">
+        <h1>Wilkommen zurück <br> bei FabuCar</h1>
+      </div>
+      <div class="text">
+        <br>
+        <p>Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.</p>
+        <br>
+      </div>
+      <input id="input-email" class="form-control field" type="text" placeholder="E-Mail Adresse oder Benutzername">
+      <div class="password-box">
+        <input id="input-password" class="form-control field" type="password" placeholder="Passwort">
+        <a class="button-forgot-password"href="">Vergessen</a>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="buttons">
+      <%= link_to "Zurück", root_path, class:"button-empty" %>
+      <button id="button-login" class="button-blue small">Login</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("turbolinks:load", () => {
+
+    const buttonLogin = document.getElementById("button-login");
+
+    buttonLogin.addEventListener("click", showEmailAndPass);
+
+    function showEmailAndPass() {
+      const email = document.getElementById("input-email").value;
+      const password = document.getElementById("input-password").value;
+      console.log(`Email: ${email}, Password: ${password}`);
+    }
+  })
+</script>

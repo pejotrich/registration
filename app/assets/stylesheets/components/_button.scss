@@ -1,0 +1,66 @@
+.button-blue {
+  background-color: #0071bc;
+  font-size: 14px;
+  font-family: $body-font;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-empty {
+  background-color: white;
+  font-size: 14px;
+  font-family: $body-font;
+  color: black;
+  border-radius: 5px;
+  width: 164px;
+  height: 48px;
+  margin-bottom: 10px;
+  border: solid 1px lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-forgot-password {
+  position: absolute;
+  font-size: 14px;
+  bottom: 50%;
+  right: 20px;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, 50%);
+}
+
+.small {
+  width: 164px;
+}
+
+.password-box {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+#pass-status {
+  position: absolute;
+  font-size: 14px;
+  bottom: 50%;
+  right: 20px;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, 50%);
+}
+
+#pass-status1 {
+  position: absolute;
+  font-size: 14px;
+  bottom: 50%;
+  right: 20px;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, 50%);
+}

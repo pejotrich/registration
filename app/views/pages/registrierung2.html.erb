@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="main">
+    <div class="center">
+      <div class="headline">
+        <h1>Gib deinen Verifizierungscode ein</h1>
+      </div>
+      <div class="text">
+        <br>
+        <p>Wir haben dir eine E-Mail an s.beeken@yahoo.de geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein. </p>
+        <br>
+      </div>
+      <div id="form">
+        <input type="text" maxLength="1" size="1"/>
+        <input type="text" maxLength="1" size="1"/>
+        <input type="text" maxLength="1" size="1"/>
+        <input type="text" maxLength="1" size="1"/>
+        <input type="text" maxLength="1" size="1"/>
+        <input type="text" maxLength="1" size="1"/>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="buttons">
+      <%= link_to "Zurück", registrierung1_path, class:"button-empty" %>
+      <a id="button-code"href="password" class="button-blue small">Weiter</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const buttonCode = document.getElementById("button-code");
+  buttonCode.addEventListener("click", saveCode);
+
+  function saveCode() {
+    const array = document.querySelectorAll("input");
+    let code = "";
+    array.forEach(element => code = code + element.value);
+    sessionStorage.setItem("code", code);
+  }
+</script>

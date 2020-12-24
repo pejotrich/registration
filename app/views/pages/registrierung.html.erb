@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="main">
+    <div class="center">
+      <div class="headline">
+        <h1>Gib deinen Namen ein</h1>
+      </div>
+      <div class="text">
+        <br>
+        <p>Wichtig ist, dass du deinen richtigen Namen eingibst, da wir nur so deine Qualifikation zuordnen können.</p>
+        <p>Hinweis: Für eine vollständige Registrierung muss ein Nachweis als Berufs-KFZler erbracht werden.</p>
+        <br>
+      </div>
+      <input id="input-name" class="form-control field" type="text" placeholder="Vor-und Nachname">>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="buttons">
+      <%= link_to "Zurück", root_path, class:"button-empty" %>
+      <a id="button-name" href="registrierung1" class="button-blue small">Weiter</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const buttonName = document.getElementById("button-name");
+  console.log(buttonName);
+  buttonName.addEventListener("click", saveName);
+
+  function saveName() {
+    const name = document.getElementById("input-name").value;
+    sessionStorage.setItem("name", name);
+  }
+</script>
