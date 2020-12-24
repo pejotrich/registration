@@ -31,6 +31,8 @@
 
 
 <script>
+document.addEventListener("turbolinks:load", () => {
+
   document.getElementById("email-placeholder").innerText = sessionStorage.getItem("email")
   const buttonCode = document.getElementById("button-code");
   buttonCode.addEventListener("click", saveCode);
@@ -41,4 +43,6 @@
     array.forEach(element => code = code + element.value);
     sessionStorage.setItem("code", code);
   }
+
+});
 </script>
