@@ -37,7 +37,6 @@
     const array = document.querySelectorAll("input");
     let address = "";
     array.forEach(element => address = address + "," + element.value);
-    console.log(address)
     sessionStorage.setItem("address", address);
   }
 </script>
